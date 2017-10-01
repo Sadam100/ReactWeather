@@ -3,7 +3,11 @@ var React = require("react");
 var About = React.createClass({
     render: function() {
         return(
-            <h2>About Component</h2>
+            <div>
+                <h1 className="text-center">About</h1>
+                <p>This is a weather application build on React.</p>
+            </div>
+            
         );
     }
 });

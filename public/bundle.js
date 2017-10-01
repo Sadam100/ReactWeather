@@ -25990,7 +25990,7 @@ var Weather = React.createClass({
       if (isLoading) {
         return React.createElement(
           'h3',
-          null,
+          { className: 'text-center' },
           'Fetching weather...'
         );
       } else if (temp && location) {
@@ -26002,9 +26002,9 @@ var Weather = React.createClass({
       'div',
       null,
       React.createElement(
-        'h3',
-        null,
-        'Weather Component'
+        'h1',
+        { className: 'text-center' },
+        'Get Weather'
       ),
       React.createElement(WeatherForm, { onSearch: this.handleSearch }),
       renderMessage()
@@ -26046,7 +26046,7 @@ var WeatherForm = React.createClass({
         React.createElement('input', { type: 'text', ref: 'location' }),
         React.createElement(
           'button',
-          null,
+          { className: 'button expanded hollow' },
           'Get Weather'
         )
       )
@@ -26066,7 +26066,7 @@ module.exports = WeatherForm;
 var React = __webpack_require__(4);
 
 var WeatherMessage = React.createClass({
-  displayName: 'WeatherMessage',
+  displayName: "WeatherMessage",
 
   render: function render() {
     var _props = this.props,
@@ -26075,13 +26075,13 @@ var WeatherMessage = React.createClass({
 
 
     return React.createElement(
-      'h3',
-      null,
-      'It\'s it ',
+      "h3",
+      { className: "text-center" },
+      "It's it ",
       temp,
-      ' in ',
+      " in ",
       location,
-      '.'
+      "."
     );
   }
 });
@@ -27004,9 +27004,18 @@ var About = React.createClass({
 
     render: function render() {
         return React.createElement(
-            "h2",
+            "div",
             null,
-            "About Component"
+            React.createElement(
+                "h1",
+                { className: "text-center" },
+                "About"
+            ),
+            React.createElement(
+                "p",
+                null,
+                "This is a weather application build on React."
+            )
         );
     }
 });
